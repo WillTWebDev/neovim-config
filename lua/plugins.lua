@@ -1,4 +1,4 @@
-return { 
+return {
     -- Required by other plugins
     "kyazdani42/nvim-web-devicons",
     "nvim-lua/plenary.nvim", -- Lua functions used by many plugins
@@ -17,13 +17,13 @@ return {
     "numToStr/Comment.nvim",
 
     -- Testing
-    { 
+    {
         "vim-test/vim-test",
         event = "VeryLazy"
     },
 
     -- Time Tracking
-    { 
+    {
         "wakatime/vim-wakatime",
         event = "VeryLazy"
     },
@@ -32,15 +32,5 @@ return {
     {
         "mbbill/undotree",
         event = "VeryLazy"
-    },
-
-    -- Startup Screen
-    {
-        "goolord/alpha-nvim",
-        requires = { "kyazdani42/nvim-web-devicons" },
-        lazy = false,
-        config = function ()
-                require("alpha").setup(require("alpha.themes.startify").config)
-        end
     },
 }

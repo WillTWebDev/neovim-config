@@ -1,6 +1,6 @@
 return {
     -- Debugging
-    { 
+    {
         "simrat39/rust-tools.nvim", -- Better Rust tooling
         config = function()
             local rt = require("rust-tools")
@@ -19,7 +19,7 @@ return {
         end,
         event = "VeryLazy"
     },
-    { 
+    {
         "mfussenegger/nvim-dap",
         config = function()
             local dap = require("dap")
@@ -161,8 +161,19 @@ return {
     "lukas-reineke/indent-blankline.nvim",
 
     -- Color Selection Tools
-    { 
+    {
         "nvim-colortils/colortils.nvim",
         event = "VeryLazy"
     },
+
+    -- Startup Screen
+    {
+        "goolord/alpha-nvim",
+        dependencies = { "kyazdani42/nvim-web-devicons" },
+        event = "VimEnter",
+        config = function ()
+                require("alpha").setup(require("alpha.themes.startify").config)
+        end
+    },
+
 }
