@@ -19,6 +19,12 @@ local t = "t" -- Terminal
 local c = "c" -- Command
 
 -- Normal Mappings
+-- Editor Commands for the Lazy
+map(n, "<Leader>qa", ":qa<CR>", opts)
+map(n, "<Leader>qaf", ":qa!<CR>", opts) -- Force close everything
+map(n, "<Leader>w", ":w<CR>", opts)
+map(n, "<Leader>wa", ":wa<CR>", opts)
+
 -- Window Navigation
 map(n, "<C-h>", "<C-w>h", opts)
 map(n, "<C-j>", "<C-w>j", opts)
