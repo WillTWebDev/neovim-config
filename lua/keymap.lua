@@ -83,11 +83,15 @@ map(n, "<Leader>di", ":lua require('dap').step_into()<CR>", opts)
 map(n, "<Leader>do", ":lua require('dap').step_out()<CR>", opts)
 map(n, "<Leader>dv", ":lua require('dap').repl.open()<CR>", opts)
 
--- Debugging (.Net Specific)
+-- Build & Run (.Net Specific)
 map(n, "<Leader>dnr", ":!dotnet run<CR>", opts)
 map(n, "<Leader>dnb", ":!dotnet build<CR>", opts)
 map(n, "<Leader>dnt", ":!dotnet test<CR>", opts)
 map(n, "<Leader>dnpr", ":!dotnet restore<CR>", opts)
+
+-- Build & Run (Rust Specific)
+map(n, "<Leader>cr", ":!cargo run<CR>", opts)
+map(n, "<Leader>cc", ":!cargo clippy<CR>", opts)
 
 -- Testing
 map(n, "<Leader>t", vim.cmd.TestNearest, opts)
