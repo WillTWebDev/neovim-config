@@ -106,10 +106,16 @@ map(n, "<Leader>ts", vim.cmd.TestSuite, opts)
 map(n, "<Leader>tl", vim.cmd.TestLast, opts)
 map(n, "<Leader>tv", vim.cmd.TestVisit, opts)
 
+-- Nvim Key Config Shortcuts
+map(n, "\\e", ":e ~/.config/nvim/lua/keymap.lua<CR>", opts)
+map(n, "\\r", ":luafile ~/.config/nvim/lua/keymap.lua<CR>", opts)
+
 -- Insert Mappings
 map(i, ";;", "<ESC>", opts) -- Easy exit to Normal Mode
 
 -- Visual Mappings
+map(v, ";;", "<ESC>", opts) -- Easy exit to Normal Mode
+
 -- Stay in Visual Mode After Indentation
 map(v, ">", ">gv", opts)
 map(v, "<", "<gv", opts)
